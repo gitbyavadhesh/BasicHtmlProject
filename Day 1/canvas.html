@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="A sample webpage" />
+        <meta name="website-purpose" content="To show examples of web development" />
+        <title>it's my first project</title>
+    </head>
+      <body>
+         <canvas id="drawing-canvas" width="1000" height="500"></canvas>
+
+        <script>
+            const canvas = document.getElementById('drawing-canvas');
+            const ctx = canvas.getContext('2d');
+
+            ctx.fillStyle = 'red';
+            ctx.fillRect(10, 10, 150, 100);
+
+            ctx.fillStyle = 'green';
+            ctx.fillRect(170, 10, 150, 100);
+
+            ctx.fillStyle = 'yellow';
+            ctx.fillRect(330, 10, 150, 100);
+
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(490, 10, 150, 100);
+
+
+        </script>
+      </body>
+</html>

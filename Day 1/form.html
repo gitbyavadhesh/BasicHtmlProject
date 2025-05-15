@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="A sample webpage" />
+        <meta name="website-purpose" content="To show examples of web development" />
+        <title>Registration details</title>
+        <script>
+           const handelsubmit = (SubmitEvent) => {
+            const form = document.getElementById('registrationForm');
+        
+            SubmitEvent.preventDefault();
+            const formData = new FormData(form);
+
+            console.log(Object.fromEntries(formData));
+            alert(JSON.stringify(Object.fromEntries(formData), null, 2));
+        } 
+            
+        </script>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <form id="registrationForm" onsubmit="return handelsubmit(event);">
+        <h2>Registration Form</h2>
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" />
+        </div>
+        <div>
+            <label for="lastNmae">Last Name</label>
+            <input type="text" name="lastName" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" />
+        </div>
+        <div>
+            <label for="phone">Phone Number</label>
+            <input type="number" name="phone" />
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <br/>
+            <span>
+                <label style="user-select: none;">
+                  <input type="radio" name="gender" value="male" />
+                  Male
+                </label>
+            </span>
+             <span>
+                <label style="user-select: none;">
+                  <input type="radio" name="gender" value="female" />
+                  female
+                </label>
+            </span>
+             <span>
+                <label style="user-select: none;">
+                  <input type="radio" name="gender" value="Not to say" />
+                  Not to say
+                </label>
+            </span>
+        </div>
+        <div>
+            <input type="checkbox" name="Emails" />
+            <label for="Emails">Do u want to receive email</label>
+        </div>
+        <div>
+            <label for="country">Country</label>
+            <select name="country">
+                <option selected disabled>-- Select Country</option>
+                <option value="ind">India</option>
+                <option value="nep">Nepal</option>
+                <option value="bhu">Bhutan</option>
+                <option value="ame">America</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+        </form>
+    </body>
+</html>
